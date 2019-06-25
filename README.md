@@ -1,2 +1,2 @@
-# Pandas-Or-Jupyter-Notebook-Practice
-This is pandas and jupyter notebook practice
+# Date Time Related-Practice
+This is Date time related practice
