@@ -1,0 +1,121 @@
+Microsoft Windows [Version 6.1.7601]Copyright (c) 2009 Microsoft Corporation.  All rights reserved.E:\Study\Python Coding\demo>python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32   
+Type "help", "copyright", "credits" or "license" for more information.          
+>>> import datetime                                                             
+>>> datetime.datetime.now() 
+datetime.datetime(2019, 5, 3, 16, 1, 18, 948546)
+>>> type(datetime.datetime.now())
+<class 'datetime.datetime'> 
+>>> datetime.datetime.now()                                                     
+datetime.datetime(2019, 5, 3, 16, 2, 50, 604788)                                
+>>> now                                                                         
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+NameError: name 'now' is not defined                                            
+>>> yesterday.datetime.datetime.now(2019,4,3,16,2,50,604788)                    
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+NameError: name 'yesterday' is not defined                                      
+
+>>> yesterday.datetime.datetime.now(2019,4,3,16,2,50,604788)                   
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+NameError: name 'yesterday' is not defined                                      
+>>> yesterday=datetime.datetime.now(2019,4,3,16,2,50,604788)                    
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+TypeError: now() takes at most 1 argument (7 given)                             
+>>> yesterday=datetime.datetime(2019,5,2,16,0,0,0)                              
+>>> datetime.datetime.now()                                                     
+datetime.datetime(2019, 5, 3, 16, 26, 14, 184068)                              
+>>> now = datetime.datetime.now()                                               
+>>> now                                                                         
+datetime.datetime(2019, 5, 3, 16, 27, 2, 433828)                                
+>>> now-yesterday                                                               
+datetime.timedelta(days=1, seconds=1622, microseconds=433828)                   
+>>> delta = now-yesterday                                                      
+>>> delta                                                                       
+datetime.timedelta(days=1, seconds=1622, microseconds=433828)                   
+>>> delta.days                                                                  
+1                                                                               
+>>> delta.total_seconds                                                         
+<built-in method total_seconds of datetime.timedelta object at 0x0052C1D0>      
+>>> delta.total_seconds()                                                       
+88022.433828                                                                    
+>>> now                                                                         
+datetime.datetime(2019, 5, 3, 16, 27, 2, 433828)                                
+>>> str(now)                                                                    
+'2019-05-03 16:27:02.433828'                                                    
+>>> now.srtftime("%Y/%m/%d,%H-%M-%S-%f")                                        
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+AttributeError: 'datetime.datetime' object has no attribute 'srtftime'          
+>>> now.srtftime("%Y-%m-%d-%H-%M-%S-%f")                                        
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+AttributeError: 'datetime.datetime' object has no attribute 'srtftime'          
+>>> now                                                                         
+datetime.datetime(2019, 5, 3, 16, 27, 2, 433828)                                
+>>> now.srtftime("%Y/%m/%d,%H-%M-%S-%f")                                        
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+AttributeError: 'datetime.datetime' object has no attribute 'srtftime'          
+>>> now                                                                         
+datetime.datetime(2019, 5, 3, 16, 27, 2, 433828)                                
+>>> str(now)                                                                    
+'2019-05-03 16:27:02.433828'                                                    
+>>> now.srtftime("%Y/%m/%d,%H-%M-%S-%f")                                        
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+AttributeError: 'datetime.datetime' object has no attribute 'srtftime'          
+>>> now.srtftime("%Y-%m-%d-%H-%M-%S-%f")                                        
+Traceback (most recent call last):                                                
+File "<stdin>", line 1, in <module>                                           
+AttributeError: 'datetime.datetime' object has no attribute 'srtftime'          
+>>> now.strftime("%Y/%m/%d,%H-%M-%S-%f")                                        
+'2019/05/03,16-27-02-433828'                                                    
+>>> now.strftime("%Y/%B/%d,%H-%M-%S-%f")                                        
+'2019/May/03,16-27-02-433828'                                                   
+>>>  now                                                                          
+File "<stdin>", line 1                                                            
+now                                                                             
+^                                                                           
+IndentationError: unexpected indent                                             
+>>> now                                                                         
+datetime.datetime(2019, 5, 3, 16, 27, 2, 433828)                                
+>>> after = now+datetime.timedelta(days=2)                                      
+>>> after                                                                       
+datetime.datetime(2019, 5, 5, 16, 27, 2, 433828)                                
+>>>  import time                                                                  
+File "<stdin>", line 1                                                            
+import time                                                                     
+^                                                                           
+IndentationError: unexpected indent                                             
+>>> import time                                                                 
+>>> lst=[]                                                                      
+>>> for i in range(5):                                                          
+...    lst.append(datetime.datetime.now()                                       
+...    time.sleep(1)                                                              
+File "<stdin>", line 3                                                            
+time.sleep(1)                                                                      
+^                                                                        
+SyntaxError: invalid syntax                                                     
+>>> for i in range(5):                                                          
+...    lst.append(datetime.datetime.now())                                      
+...    time.sleep(1)                                                            
+...                                                                             
+>>> lst                                                                         
+[datetime.datetime(2019, 5, 3, 16, 56, 20, 284371), 
+datetime.datetime(2019, 5, 3, 16, 56, 21, 284428), 
+datetime.datetime(2019, 5, 3, 16, 56, 22, 284486), 
+datetime.datetime(2019, 5, 3, 16, 56, 23, 284543), 
+datetime.datetime(2019, 5, 3, 16, 56, 24, 284600)]                                                                 
+>>> for i in lst:                                                               
+...     print(i)                                                                
+...                                                                             
+2019-05-03 16:56:20.284371                                                      
+2019-05-03 16:56:21.284428                                                      
+2019-05-03 16:56:22.284486                                                      
+2019-05-03 16:56:23.284543                                                      
+2019-05-03 16:56:24.284600                                                      
+                                                                            
